@@ -169,6 +169,7 @@ public class LightAPI extends JavaPlugin implements Listener {
 			return;
 		}
 
+		ChunkCache.CHUNK_INFO_QUEUE.clear(); // workaround concurrent ClassLoader.definePackage due to registerEvents
 		machine.start(LightAPI.getInstance().getUpdateDelayTicks(), LightAPI.getInstance().getMaxIterationsPerTick()); // TEST
 		getServer().getPluginManager().registerEvents(this, this);
 
