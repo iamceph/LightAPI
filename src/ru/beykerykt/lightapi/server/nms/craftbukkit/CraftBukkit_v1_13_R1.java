@@ -23,10 +23,10 @@
  */
 package ru.beykerykt.lightapi.server.nms.craftbukkit;
 
-import net.minecraft.server.v1_12_R1.*;
+import net.minecraft.server.v1_13_R1.*;
 import org.bukkit.World;
-import org.bukkit.craftbukkit.v1_12_R1.CraftWorld;
-import org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_13_R1.CraftWorld;
+import org.bukkit.craftbukkit.v1_13_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import ru.beykerykt.lightapi.chunks.ChunkInfo;
 import ru.beykerykt.lightapi.server.nms.INMSHandler;
@@ -36,7 +36,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class CraftBukkit_v1_12_R1 implements INMSHandler {
+public class CraftBukkit_v1_13_R1 implements INMSHandler {
 
 	private static Field cachedChunkModified;
 
@@ -74,7 +74,7 @@ public class CraftBukkit_v1_12_R1 implements INMSHandler {
 						if (isModified.getBoolean(chunk)) {
 							ChunkInfo cCoord = new ChunkInfo(world, chunk.locX, y, chunk.locZ, world.getPlayers());
 							list.add(cCoord);
-							chunk.f(false);
+							chunk.a(false);
 						}
 					}
 				}
@@ -129,7 +129,7 @@ public class CraftBukkit_v1_12_R1 implements INMSHandler {
 
 	private static Field getChunkField(Object chunk) throws NoSuchFieldException, SecurityException {
 		if (cachedChunkModified == null) {
-			cachedChunkModified = chunk.getClass().getDeclaredField("s");
+			cachedChunkModified = chunk.getClass().getDeclaredField("y");
 			cachedChunkModified.setAccessible(true);
 		}
 		return cachedChunkModified;

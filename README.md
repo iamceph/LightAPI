@@ -1,13 +1,14 @@
 ![Image](/others/light_api_logo_version_3.png)
 # LightAPI
 Bukkit Library for create invisible light source
-- [ SPIGOT RESOURCE ](https://www.spigotmc.org/resources/lightapi.4510/)
-- [ CONTRIBUTORS ](https://github.com/BeYkeRYkt/LightAPI/graphs/contributors)
+
+- [ SPIGOT RESOURCE ](https://www.spigotmc.org/resources/lightapi-temporary-fork.48247/) ([ original ](https://www.spigotmc.org/resources/lightapi.4510/))
+- [ CONTRIBUTORS ](https://github.com/Qveshn/LightAPI/graphs/contributors) ([ original ](https://github.com/BeYkeRYkt/LightAPI/graphs/contributors))
 
 # License
 > The MIT License (MIT)
 >
->Copyright (c) 2015 - 2016
+>Copyright (c) 2015 - 2018
 >
 >Permission is hereby granted, free of charge, to any person obtaining a copy
 >of this software and associated documentation files (the "Software"), to deal
