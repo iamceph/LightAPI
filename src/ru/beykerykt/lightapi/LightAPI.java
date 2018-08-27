@@ -92,6 +92,7 @@ public class LightAPI extends JavaPlugin implements Listener {
 		craftbukkit.getVersions().put("v1_11_R1", CraftBukkit_v1_11_R1.class);
 		craftbukkit.getVersions().put("v1_12_R1", CraftBukkit_v1_12_R1.class);
 		craftbukkit.getVersions().put("v1_13_R1", CraftBukkit_v1_13_R1.class);
+		craftbukkit.getVersions().put("v1_13_R2", CraftBukkit_v1_13_R2.class);
 		ServerModManager.registerServerMod(craftbukkit);
 
 		ServerModInfo spigot = new ServerModInfo("Spigot");
@@ -102,6 +103,7 @@ public class LightAPI extends JavaPlugin implements Listener {
 		spigot.getVersions().put("v1_11_R1", CraftBukkit_v1_11_R1.class);
 		spigot.getVersions().put("v1_12_R1", CraftBukkit_v1_12_R1.class);
 		spigot.getVersions().put("v1_13_R1", CraftBukkit_v1_13_R1.class);
+		spigot.getVersions().put("v1_13_R2", CraftBukkit_v1_13_R2.class);
 		ServerModManager.registerServerMod(spigot);
 
 		ServerModInfo paperspigot = new ServerModInfo("PaperSpigot");
@@ -115,6 +117,7 @@ public class LightAPI extends JavaPlugin implements Listener {
 		paper.getVersions().put("v1_11_R1", CraftBukkit_v1_11_R1.class);
 		paper.getVersions().put("v1_12_R1", CraftBukkit_v1_12_R1.class);
 		paper.getVersions().put("v1_13_R1", CraftBukkit_v1_13_R1.class);
+		paper.getVersions().put("v1_13_R2", CraftBukkit_v1_13_R2.class);
 		ServerModManager.registerServerMod(paper);
 
 		ServerModInfo tacospigot = new ServerModInfo("TacoSpigot");
@@ -125,6 +128,7 @@ public class LightAPI extends JavaPlugin implements Listener {
 		tacospigot.getVersions().put("v1_11_R1", CraftBukkit_v1_11_R1.class);
 		tacospigot.getVersions().put("v1_12_R1", CraftBukkit_v1_12_R1.class);
 		tacospigot.getVersions().put("v1_13_R1", CraftBukkit_v1_13_R1.class);
+		tacospigot.getVersions().put("v1_13_R2", CraftBukkit_v1_13_R2.class);
 		ServerModManager.registerServerMod(tacospigot);
 		
 		ServerModInfo akarin = new ServerModInfo("Akarin");
@@ -134,6 +138,7 @@ public class LightAPI extends JavaPlugin implements Listener {
 		akarin.getVersions().put("v1_11_R1", CraftBukkit_v1_11_R1.class);
 		akarin.getVersions().put("v1_12_R1", CraftBukkit_v1_12_R1.class);
 		akarin.getVersions().put("v1_13_R1", CraftBukkit_v1_13_R1.class);
+		akarin.getVersions().put("v1_13_R2", CraftBukkit_v1_13_R2.class);
 		ServerModManager.registerServerMod(akarin);
 	}
 
