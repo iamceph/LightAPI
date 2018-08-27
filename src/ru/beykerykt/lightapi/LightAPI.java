@@ -126,6 +126,15 @@ public class LightAPI extends JavaPlugin implements Listener {
 		tacospigot.getVersions().put("v1_12_R1", CraftBukkit_v1_12_R1.class);
 		tacospigot.getVersions().put("v1_13_R1", CraftBukkit_v1_13_R1.class);
 		ServerModManager.registerServerMod(tacospigot);
+		
+		ServerModInfo akarin = new ServerModInfo("Akarin");
+		akarin.getVersions().put("v1_9_R1", CraftBukkit_v1_9_R1.class);
+		akarin.getVersions().put("v1_9_R2", CraftBukkit_v1_9_R2.class);
+		akarin.getVersions().put("v1_10_R1", CraftBukkit_v1_10_R1.class);
+		akarin.getVersions().put("v1_11_R1", CraftBukkit_v1_11_R1.class);
+		akarin.getVersions().put("v1_12_R1", CraftBukkit_v1_12_R1.class);
+		akarin.getVersions().put("v1_13_R1", CraftBukkit_v1_13_R1.class);
+		ServerModManager.registerServerMod(akarin);
 	}
 
 	@Override
