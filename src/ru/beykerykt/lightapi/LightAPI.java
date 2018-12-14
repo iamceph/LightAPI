@@ -57,7 +57,6 @@ import ru.beykerykt.lightapi.server.ServerModManager;
 import ru.beykerykt.lightapi.server.exceptions.UnknownModImplementationException;
 import ru.beykerykt.lightapi.server.exceptions.UnknownNMSVersionException;
 import ru.beykerykt.lightapi.server.nms.craftbukkit.*;
-import ru.beykerykt.lightapi.server.nms.paperspigot.PaperSpigot_v1_8_R3;
 import ru.beykerykt.lightapi.updater.Response;
 import ru.beykerykt.lightapi.updater.UpdateType;
 import ru.beykerykt.lightapi.updater.Updater;
@@ -107,7 +106,7 @@ public class LightAPI extends JavaPlugin implements Listener {
 		ServerModManager.registerServerMod(spigot);
 
 		ServerModInfo paperspigot = new ServerModInfo("PaperSpigot");
-		paperspigot.getVersions().put("v1_8_R3", PaperSpigot_v1_8_R3.class);
+		paperspigot.getVersions().put("v1_8_R3", CraftBukkit_v1_8_R3.class);
 		ServerModManager.registerServerMod(paperspigot);
 
 		ServerModInfo paper = new ServerModInfo("Paper");

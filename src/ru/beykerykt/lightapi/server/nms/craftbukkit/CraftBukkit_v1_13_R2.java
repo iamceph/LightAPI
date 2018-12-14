@@ -68,7 +68,7 @@ public class CraftBukkit_v1_13_R2 implements INMSHandler {
 			WorldServer nmsWorld = ((CraftWorld) world).getHandle();
 			for (int dX = -1; dX <= 1; dX++) {
 				for (int dZ = -1; dZ <= 1; dZ++) {
-					if (nmsWorld.getChunkProviderServer().isLoaded(chunkX + dX, chunkZ + dZ)) {
+					if (nmsWorld.getChunkProvider().isLoaded(chunkX + dX, chunkZ + dZ)) {
 						Chunk chunk = nmsWorld.getChunkAt(chunkX + dX, chunkZ + dZ);
 						Field isModified = getChunkField(chunk);
 						if (isModified.getBoolean(chunk)) {
