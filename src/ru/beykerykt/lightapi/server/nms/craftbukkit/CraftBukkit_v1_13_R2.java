@@ -32,6 +32,7 @@ import ru.beykerykt.lightapi.chunks.ChunkInfo;
 import ru.beykerykt.lightapi.server.nms.INMSHandler;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -39,6 +40,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class CraftBukkit_v1_13_R2 implements INMSHandler {
 
 	private static Field cachedChunkModified;
+	private static Method getChunkProvider;
 
 	@Override
 	public void createLight(World world, int x, int y, int z, int light) {
@@ -66,9 +68,13 @@ public class CraftBukkit_v1_13_R2 implements INMSHandler {
 		int chunkZ = z >> 4;
 		try {
 			WorldServer nmsWorld = ((CraftWorld) world).getHandle();
+			if (getChunkProvider == null) {
+				getChunkProvider = WorldServer.class.getDeclaredMethod("getChunkProvider");
+			}
+			ChunkProviderServer chunkProvider = (ChunkProviderServer) getChunkProvider.invoke(nmsWorld);
 			for (int dX = -1; dX <= 1; dX++) {
 				for (int dZ = -1; dZ <= 1; dZ++) {
-					if (nmsWorld.getChunkProvider().isLoaded(chunkX + dX, chunkZ + dZ)) {
+					if (chunkProvider.isLoaded(chunkX + dX, chunkZ + dZ)) {
 						Chunk chunk = nmsWorld.getChunkAt(chunkX + dX, chunkZ + dZ);
 						Field isModified = getChunkField(chunk);
 						if (isModified.getBoolean(chunk)) {
