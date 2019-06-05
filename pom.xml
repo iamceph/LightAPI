@@ -6,7 +6,7 @@
 
     <groupId>ru.beykerykt</groupId>
     <artifactId>lightapi</artifactId>
-    <version>3.2.9</version>
+    <version>3.2.10</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -17,48 +17,73 @@
     <dependencies>
         <dependency>
             <groupId>org.spigotmc.......</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.14-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/spigot-1.14.2.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.spigotmc.......</groupId>
             <artifactId>spigot</artifactId>
             <version>1.13.2-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/spigot-1.13.2.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.spigotmc......</groupId>
             <artifactId>spigot</artifactId>
             <version>1.13-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/spigot-1.13.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.spigotmc.....</groupId>
             <artifactId>spigot</artifactId>
             <version>1.12.2-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/spigot-1.12.2.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.spigotmc....</groupId>
             <artifactId>spigot</artifactId>
             <version>1.11-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/spigot-1.11.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.spigotmc...</groupId>
             <artifactId>spigot</artifactId>
             <version>1.10.2-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/spigot-1.10.2-R0.1-SNAPSHOT-latest.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.spigotmc..</groupId>
             <artifactId>spigot</artifactId>
             <version>1.9.4-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/spigot-1.9.4-R0.1-SNAPSHOT-latest.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.spigotmc.</groupId>
             <artifactId>spigot</artifactId>
             <version>1.9-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/spigot-1.9-R0.1-SNAPSHOT-latest.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot</artifactId>
             <version>1.8.8-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar</systemPath>
         </dependency>
     </dependencies>
 
     <build>
         <sourceDirectory>src</sourceDirectory>
+        <defaultGoal>clean install</defaultGoal>
+
         <resources>
             <resource>
                 <filtering>true</filtering>
@@ -69,15 +94,14 @@
                 </includes>
             </resource>
         </resources>
+
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.4</version>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
                 <configuration>
-                    <archive>
-                        <addMavenDescriptor>false</addMavenDescriptor>
-                    </archive>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
